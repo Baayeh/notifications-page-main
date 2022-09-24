@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+:root {
+  /* Primary */
+--red: hsl(1, 90%, 64%);
+--blue: hsl(219, 85%, 26%);
+
+/* Neutral */
+--very-light-grayish-blue: hsl(210, 60%, 98%);
+--light-grayish-blue-1: hsl(211, 68%, 94%);
+--light-grayish-blue-2: hsl(205, 33%, 90%);
+--grayish-blue: hsl(219, 14%, 63%);
+--dark-grayish-blue: hsl(219, 12%, 42%);
+--very-dark-blue: hsl(224, 21%, 14%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--very-dark-blue);
+}
+
+main {
+  padding: 1em 1em 0 1em;
+}
+
+section.notification {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section.notification div.notify {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+section.notification div.notify span.badge {
+  background-color: var(--blue);
+  color: #fff;
+  padding: 0.2em 0.7em;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+section.notification button.read-btn {
+  background-color: transparent;
+  border: none;
+  color: var(--dark-grayish-blue);
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+section.notification button.read-btn:hover {
+  color: var(--very-dark-blue);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul#message-list {
+  margin-top: 3em;
+}
+
+ul#message-list li.card {
+  display: flex;
+  flex-direction: column;
+  margin: 1em 0;
+}
+
+ul#message-list li.card div.main-card {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  background-color: var(--very-light-grayish-blue);
+  padding: 1em;
+}
+
+.bg-color {
+  background-color: #fff !important;
+}
+
+li.card div.main-card img.card-img {
+  width: 3.5em;
+}
+
+div.card-body > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+div.card-body > div > img {
+  width: 3em;
+  height: 3em;
+}
+
+div.card-body p {
+  line-height: 1.4em;
+  font-weight: 600;
+}
+
+div.card-body p span.reaction {
+  color: var(--grayish-blue);
+  margin: 0 0.2em;
+}
+
+div.card-body p span.description {
+  color: var(--dark-grayish-blue);
+}
+
+div.card-body p span.rounded-badge {
+  background-color: var(--red);
+  width: 10px;
+  height: 10px;
+  border-radius: 2em;
+  display: inline-block;
+  margin-left: 0.5em;
+}
+
+div.card-body p.time {
+  color: var(--grayish-blue);
+}
+
+li.card p.message {
+  color: var(--grayish-blue);
+  padding: 1em;
+  border: 1px solid var(--light-grayish-blue-2);
+  max-width: 17em;
+  margin-left: 5em;
+}
+
+footer.attribution { 
+  font-size: 11px; 
+  text-align: center;
+  padding: 3em 2em;
+}
+
+footer.attribution a { 
+  color: hsl(228, 45%, 44%);
+}
