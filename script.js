@@ -1,4 +1,5 @@
 const ul = document.querySelector('#message-list');
+const readBtn = document.querySelector('.read-btn');
 
 const notifications = [
   {
@@ -109,4 +110,22 @@ function addNotificationToList(notification) {
   ul.innerHTML += li;
 }
 
+function markAsRead() {
+  const badge = document.querySelector('.badge');
+  badge.innerHTML = '0';
+  const li = document.querySelectorAll('.main-card');
+  li.forEach(list => {
+    if(list.classList.contains('false')) {
+      const spans = document.querySelectorAll('.rounded-badge');
+      spans.forEach(span => {
+        span.style.display = 'none';
+      });
+      list.classList.remove('false');
+      list.classList.add('bg-color');
+    }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', displayNotifications);
+
+readBtn.addEventListener('click', markAsRead);
